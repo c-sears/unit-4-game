@@ -139,26 +139,29 @@ var gameFunctions = {
         enemyChar.hp -= userChar.attack;
         if (enemyChar.hp > 0){
             attackTime = setTimeout(gameFunctions.enemyAttack, 2000);
+            $('#enemyLog').text('You hit ' + enemyChar.name + ' for ' + userChar.attack + ' damage!');
         }
         else if (enemyChar.hp < 0){
             enemyChar.hp = 0;
+            $('#enemyLog').text('You killed ' + enemyChar.name + '! Nice going!')
             wins += 1;
             victoryTime = setTimeout(gameFunctions.endBattle, 3000); 
             if (wins == charNumber.length -1){
                 alert('Somehow you\'ve managed to win!! Congratulations!')
             }
         }
-        $('#enemyLog').text('You hit ' + enemyChar.name + ' for ' + userChar.attack + ' damage!');
         userChar.attack += 10;
         this.updateHp();
     },
     enemyAttack: function(){
         userChar.hp -= enemyChar.counter;
-        if (userChar.hp < 0){
+        $('#heroLog').text(enemyChar.name + ' countered your attack lowering your HP by ' + enemyChar.counter + '!');
+        if (userChar.hp <= 0){
             userChar.hp = 0;
+            $('.attack').prop('disabled', true);
+            $('#heroLog').text(enemyChar.name + ' killed you! gg!')
             alert('you\'re dead.');
         }
-        $('#heroLog').text(enemyChar.name + ' countered your attack lowering your HP by ' + enemyChar.counter + '!');
         gameFunctions.updateHp();
     },
     updateHp: function(){
