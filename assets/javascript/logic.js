@@ -43,7 +43,7 @@ var characters = {
         value: 'kylo',
         name: 'Kylo Ren',
         bio: 'The son of Han Solo and Leia Organa, Ben Solo was seduced by the dark side of the Force and renamed himself Kylo Ren, becoming the First Order’s champion and Supreme Leader Snoke’s student',
-        hp: 150,
+        hp: 135,
         attack: 15,
         counter: 20,
         charNum: 3,
