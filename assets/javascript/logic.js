@@ -143,11 +143,9 @@ var gameFunctions = {
         else if (enemyChar.hp < 0){
             enemyChar.hp = 0;
             wins += 1;
+            victoryTime = setTimeout(gameFunctions.endBattle, 3000); 
             if (wins == charNumber.length -1){
                 alert('Somehow you\'ve managed to win!! Congratulations!')
-            }
-            else {
-                victoryTime = setTimeout(gameFunctions.endBattle, 3000); 
             }
         }
         $('#enemyLog').text('You hit ' + enemyChar.name + ' for ' + userChar.attack + ' damage!');
