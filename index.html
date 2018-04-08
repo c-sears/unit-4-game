@@ -4,11 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Bangers|Montserrat|Mina" rel="stylesheet">
+    <!-- Local CSS -->
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <title>RPG Game | Week 4 Homework</title>
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>Lego Starwars RPG | Homework | Week-4</title>
 </head>
 <body>
     
+    <!-- Header -->
+    <header class="header">
+        <h2 class="title">Startwars RPG</h2>
+    </header>
+
+    <!-- BEGIN CHARACTER SLIDER -->
+    <!-- =================================================================== -->
+    <div class="container">
+        <div id="slideLeft"></div>
+        <div id="slideRight"></div>
+        <div class="wrapper">
+            <div class="box" id="char0"></div>
+            <div class="box" id="char1"></div>
+            <div class="box" id="char2"></div>
+            <div class="box" id="char3"></div>
+            <div class="box" id="char4"></div>
+        </div>
+        <div class="buttons">
+            <button id="pickHero">Hero</button>
+            <button id="pickEnemy">Enemy</button>
+        </div>
+    </div>
+    <!-- END CHARACTER SLIDER -->
+    <!-- =================================================================== -->
+
+    <!-- BEGIN BATTLE SCREEN -->
+    <!-- =================================================================== -->
+    <div class="container battleScreen">
+        <div class="battleBox" id="heroZone">
+                <div class="imgContainer"><div id="heroImg"></div></div>
+                <div id="heroHp"></div>
+                <div id="heroLog"></div>
+        </div>
+        <div class="battleBox" id="enemyZone">
+            <div class="imgContainer"><div id="enemyImg"></div></div>
+            <div id="enemyHp"></div>
+            <div id="enemyLog"></div>
+        </div>
+        <h1 class="vs"></h1>
+        <button class="attack">Attack!</button>
+    </div>
+    <!-- END BATTLE SCREEN -->
+    <!-- =================================================================== -->
+
+    
+
+    <!-- Local JavaScript -->
+    <script src="./assets/javascript/logic.js"></script>
 </body>
 </html>
